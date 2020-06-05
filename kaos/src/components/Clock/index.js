@@ -24,10 +24,11 @@ class Clock extends React.Component {
 
     render() {
         return (
-            <div className="DigitalClock">
-        {this.state.date.toLocaleTimeString()}
-        </div>
-    )
+            < div
+        className = "DigitalClock" >
+            {this.state.date.toLocaleTimeString()}
+            < /div>
+         )
     }
 }
 

@@ -6,7 +6,7 @@ export default class TaskBar extends React.Component {
     render() {
         return (
             <div className='TaskBar'>
-            <Clock />
+                <Clock />
             </div>
         );
     }
