@@ -1,10 +1,10 @@
 import React from "react";
-
+import './TaskBar.css';
 
 export default class TaskBar extends React.Component {
     render() {
         return (
-            <div></div>
+            <div className='TaskBar'></div>
         );
     }
 }
