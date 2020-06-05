@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Desktop from "./components/Desktop";
 import SplashScreen from "./components/SplashScreen";
+import Clock from "./components/Clock"
 
 class App extends React.Component {
     state = {
