@@ -1,0 +1,9 @@
+.TaskBar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100vw;
+    background-color: #afafaf;
+}
