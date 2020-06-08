@@ -1,0 +1,13 @@
+.windowTop {
+    width: 600px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #fbe3a2;
+}
+
+.windowMain {
+    width: 600px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #fbe3a2;
+}
