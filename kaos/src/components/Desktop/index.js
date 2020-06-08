@@ -4,6 +4,20 @@ import './Desktop.css';
 import Logo from "./Logo";
 
 export default class Desktop extends React.Component {
+    state = {
+        applications:{
+            about: false
+        }
+    };
+
+    toggleApplication = (appName) => {
+        this.setState({
+            applications:{
+                [appName]: !this.state.applications[appName]
+            }
+        })
+    };
+
     render() {
         return (
             <div className="Desktop" >
@@ -11,7 +25,7 @@ export default class Desktop extends React.Component {
                     <Logo />
                 </div>
                 {this.props.children}
-                <TaskBar />
+                <TaskBar toggleApplication={this.toggleApplication}/>
             </div>
         ) ;
     }
