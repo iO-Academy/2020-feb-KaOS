@@ -1,13 +1,16 @@
 .windowTop {
-    width: 600px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     text-align: center;
     background-color: #fbe3a2;
 }
 
 .windowMain {
-    width: 600px;
-    border: 1px solid black;
+    height: calc(100% - 20px);
+    border: 1px solid #000000;
     text-align: center;
     background-color: #fbe3a2;
+}
+
+.windowContainer {
+    height: 100%;
 }
