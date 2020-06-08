@@ -1,6 +1,6 @@
 .TaskBar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: fixed;
     bottom: 0px;
     height: 60px;
