@@ -1,4 +1,5 @@
 import React from "react";
+import "./SplashScreen.css";
 
 
 
@@ -11,7 +12,9 @@ export default class SplashScreen extends React.Component {
 
     render() {
         return (
-            <button onClick={this.createDesktop}>Full Screen</button>
+            <div className='PowerButtonContainer'>
+            <button className='PowerButton' onClick={this.createDesktop}>I/O</button>
+            </div>
         );
     }
 }
