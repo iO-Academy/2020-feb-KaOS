@@ -2,7 +2,6 @@ import React from 'react';
 import TaskBar from "./Taskbar";
 import './Desktop.css';
 import Logo from "./Logo";
-import './Logo/Logo.css'
 import Window from "./WindowComponent";
 
 export default class Desktop extends React.Component {
