@@ -23,7 +23,7 @@ class Window extends React.Component {
                         </button>
                         {this.props.name}
                     </div>
-                    <div className='windowMain'>fsfgasgag</div>
+                    <div className='windowMain'>{this.props.children}</div>
                 </div>
             </Draggable>
         );
