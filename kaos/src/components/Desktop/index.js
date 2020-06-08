@@ -9,6 +9,7 @@ export default class Desktop extends React.Component {
             about: false
         }
     };
+
     toggleApplication = (appName) => {
         this.setState({
             applications:{
@@ -16,6 +17,7 @@ export default class Desktop extends React.Component {
             }
         })
     };
+
     render() {
         return (
             <div className="Desktop" >

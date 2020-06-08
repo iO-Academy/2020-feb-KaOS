@@ -7,7 +7,9 @@ export default class TaskBar extends React.Component {
     render() {
         return (
             <div className='TaskBar'>
-                <div><IconComponent name='About' open={this.props.toggleApplication}/></div>
+                <div>
+                    <IconComponent name='About' open={this.props.toggleApplication}/>
+                </div>
                 <Clock />
             </div>
         );
