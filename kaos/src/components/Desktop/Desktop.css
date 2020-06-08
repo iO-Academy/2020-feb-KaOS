@@ -1,13 +1,8 @@
 body {
-    background-image: url('../../Image/Logo.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: fixed;
     margin: 0;
 }
 
 .LogoContainer {
-    z-index: -1;
     position: fixed;
     display: flex;
     align-items: center;
