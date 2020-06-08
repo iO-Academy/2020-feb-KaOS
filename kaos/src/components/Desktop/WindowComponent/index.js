@@ -9,7 +9,7 @@ class Window extends React.Component {
         return (
                 <Draggable
                     axis="both"
-                    handle=".windowTop"
+                    handle=".WindowTop"
                     defaultPosition={{x: 50, y: 50}}
                     position={null}
                     grid={[1, 1]}
@@ -18,18 +18,21 @@ class Window extends React.Component {
                     onDrag={this.handleDrag}
                     onStop={this.handleStop}>
                     <Resizable
-                        defaultSize={{
-                            width: 200,
-                            height: 200
-                        }}>
-                        <div className="windowContainer">
-                        <div className="windowTop">
-                            <button onClick={() => {this.props.close(this.props.name)}}>
+                    minWidth={
+                        300
+                    }
+                    defaultSize={{
+                        width: 300
+                    }}>
+
+                        <div className="WindowContainer">
+                        <div className="WindowTop">
+                            <button className="ExitButton" onClick={() => {this.props.close(this.props.name)}}>
                                 X
                             </button>
                             {this.props.name}
                         </div>
-                        <div className='windowMain'>{this.props.children}</div>
+                        <div className='WindowMain'>{this.props.children}</div>
                         </div>
                     </Resizable>
                 </Draggable>

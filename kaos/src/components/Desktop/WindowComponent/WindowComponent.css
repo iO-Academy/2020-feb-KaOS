@@ -1,16 +1,21 @@
-.windowTop {
+.WindowTop {
     border: 1px solid #000000;
     text-align: center;
-    background-color: #fbe3a2;
+    background-color: #f17711;
 }
 
-.windowMain {
+.WindowMain {
     height: calc(100% - 20px);
     border: 1px solid #000000;
     text-align: center;
-    background-color: #fbe3a2;
 }
 
-.windowContainer {
+.WindowContainer {
     height: 100%;
+}
+
+.ExitButton {
+    display: inline;
+    float: left;
+
 }

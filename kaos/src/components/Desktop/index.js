@@ -2,7 +2,8 @@ import React from 'react';
 import TaskBar from "./Taskbar";
 import './Desktop.css';
 import Logo from "./Logo";
-import Window from "./WindowComponent";
+import AboutWindow from "../AboutWindow"
+
 
 export default class Desktop extends React.Component {
     state = {
@@ -21,14 +22,15 @@ export default class Desktop extends React.Component {
 
     render() {
         return (
-            <div className="AboutWindow" >
+            <div className="AboutWindow">
                 <div className='LogoContainer'>
                 <Logo />
             </div>
-                {this.state.applications.about && <Window close={this.toggleApplication} name='About'>feuhfuh</Window>}
+                {this.state.applications.about && <AboutWindow close={this.toggleApplication}/>}
                 {this.props.children}
                 <TaskBar toggleApplication={this.toggleApplication}/>
             </div>
         ) ;
     }
 }
+
