@@ -21,7 +21,7 @@ class Window extends React.Component {
                         <button onClick={() => {this.props.close(this.props.name)}}>
                             X
                         </button>
-                        This is the window lol
+                        {this.props.name}
                     </div>
                     <div className='windowMain'>fsfgasgag</div>
                 </div>
