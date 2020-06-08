@@ -1,6 +1,6 @@
 import React from 'react'
 import { Resizable } from 're-resizable'
-import Draggable, {DraggableCore} from 'react-draggable'
+import Draggable from 'react-draggable'
 import './WindowComponent.css'
 
 class Window extends React.Component {
@@ -10,7 +10,7 @@ class Window extends React.Component {
                 <Draggable
                     axis="both"
                     handle=".windowTop"
-                    defaultPosition={{x: 500, y: 500}}
+                    defaultPosition={{x: 50, y: 50}}
                     position={null}
                     grid={[1, 1]}
                     scale={1}
