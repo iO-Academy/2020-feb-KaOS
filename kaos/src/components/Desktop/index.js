@@ -8,7 +8,8 @@ import AboutWindow from "../AboutWindow"
 export default class Desktop extends React.Component {
     state = {
         applications:{
-            about: false
+            about: false,
+            gif: false
         }
     };
 
@@ -33,4 +34,6 @@ export default class Desktop extends React.Component {
         ) ;
     }
 }
+
+
 
