@@ -2,20 +2,30 @@
     border: 1px solid #000000;
     text-align: center;
     background-color: #f17711;
+    animation: ease-in;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation-duration: 1s;
 }
 
 .WindowMain {
     height: calc(100% - 20px);
-    border: 1px solid #000000;
+    padding: 15px;
     text-align: center;
 }
 
 .WindowContainer {
     height: 100%;
+    color: #FFFFFF;
+    background-color: black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .ExitButton {
-    display: inline;
+    height: 100%;
     float: left;
-
+    background-color: transparent;
+    line-height: 200%;
+    font-weight: bold;
+    border: 0;
 }
