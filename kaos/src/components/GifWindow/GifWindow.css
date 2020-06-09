@@ -1,0 +1,8 @@
+.GifContent img {
+    width: 100%;
+}
+
+.GifContent {
+    height: 100%;
+    overflow: auto;
+}

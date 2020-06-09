@@ -1,7 +1,6 @@
 .AboutContent {
-    background-color: #ffffff;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .MikeImg {
