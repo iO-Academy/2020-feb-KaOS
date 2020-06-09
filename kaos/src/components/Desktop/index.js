@@ -9,7 +9,8 @@ export default class Desktop extends React.Component {
     state = {
         applications:{
             About: false,
-            Gif: false
+            Gif: false,
+            Music: false
         }
     };
 
