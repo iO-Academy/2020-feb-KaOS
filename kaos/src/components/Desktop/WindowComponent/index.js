@@ -22,7 +22,8 @@ class Window extends React.Component {
                         300
                     }
                     defaultSize={{
-                        width: 300
+                        width: 300,
+                        height: this.props.height
                     }}>
 
                         <div className="WindowContainer">

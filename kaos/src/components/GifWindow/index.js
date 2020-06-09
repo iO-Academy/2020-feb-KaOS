@@ -21,7 +21,7 @@ export default class GifWindow extends React.Component {
 
     render() {
         return (
-            <Window close={this.props.close} name='Gif'>
+            <Window height={300} close={this.props.close} name='Gif'>
                 <div className='GifContent'>
                     {!this.state.loading?<img src={this.state.gifs[0].images.fixed_height.url}/>:'Loading...'}
                     {console.log(this.state.gifs[0])}
