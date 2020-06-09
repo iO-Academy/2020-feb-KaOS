@@ -12,7 +12,6 @@ export default class GifWindow extends React.Component {
         let gifs = await fetch("http://api.giphy.com/v1/gifs/random?api_key=ne12OfQigz9qivvaPFcvox98fuA5SRyV");
         gifs = await gifs.json()
         this.setState({gifs, loading: false});
-        console.log(gifs)
     }
 
     componentDidMount() {
