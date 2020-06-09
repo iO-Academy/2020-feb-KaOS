@@ -31,7 +31,6 @@ export default class Desktop extends React.Component {
                     </div>
                     {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
                     {this.state.applications.About && <AboutWindow  close={this.toggleApplication}/>}
-                    {this.props.children}
                     <TaskBar toggleApplication={this.toggleApplication}/>
                 </div>
             </div>
