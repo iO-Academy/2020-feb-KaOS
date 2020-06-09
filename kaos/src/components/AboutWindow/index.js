@@ -10,8 +10,8 @@ export default class AboutWindow extends React.Component {
                 <div className='AboutContent'>
                     KaOS is a pretty cool browser based operation system,
                     written in React by Alex Jennings, Bradley Purdue, Vincent Pires and Samuel Crudge.
-                    Inspired by Mike Oram's love for the Microsoft Windows operating system.
-                    <img className='MikeImg' src={Mike}/>
+                    {/*Inspired by Mike Oram's love for the Microsoft Windows operating system.*/}
+                    {/*<img className='MikeImg' src={Mike}/>*/}
                 </div>
             </Window>
         )
