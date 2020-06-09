@@ -11,8 +11,9 @@ export default class GifWindow extends React.Component {
 
     getGif = async () => {
        const giphy = new GiphyFetch('ne12OfQigz9qivvaPFcvox98fuA5SRyV');
-       const {data: gifs} = await giphy.trending({limit: 1})
+       const {data: gifs} = await giphy.random()
         this.setState({gifs, loading: false});
+        console.log(gifs);
     }
 
     componentDidMount() {
@@ -21,10 +22,9 @@ export default class GifWindow extends React.Component {
 
     render() {
         return (
-            <Window height={300} close={this.props.close} name='Gif'>
+            <Window close={this.props.close} name='Gif'>
                 <div className='GifContent'>
-                    {!this.state.loading?<img src={this.state.gifs[0].images.fixed_height.url}/>:'Loading...'}
-                    {console.log(this.state.gifs[0])}
+                    {!this.state.loading?<img src={this.state.gifs.images.fixed_height.url}/>:'Loading...'}
                 </div>
             </Window>
         )
