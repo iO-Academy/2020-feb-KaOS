@@ -9,11 +9,14 @@
 }
 
 .WindowMain {
-    height: calc(100% - 20px);
     text-align: center;
+    height: 100%;
+    min-height: 140px;
 }
 
 .WindowContainer {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     color: #FFFFFF;
     background-color: black;
@@ -27,4 +30,8 @@
     line-height: 200%;
     font-weight: bold;
     border: 0;
+}
+
+.react-draggable {
+    position: absolute !important;
 }

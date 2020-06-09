@@ -24,14 +24,16 @@ export default class Desktop extends React.Component {
 
     render() {
         return (
-            <div className="AboutWindow">
-                <div className='LogoContainer'>
-                <Logo />
-            </div>
-                {this.state.applications.About && <AboutWindow close={this.toggleApplication}/>}
-                {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
-                {this.props.children}
-                <TaskBar toggleApplication={this.toggleApplication}/>
+            <div>
+                <div className="AboutWindow">
+                    <div className='LogoContainer'>
+                        <Logo/>
+                    </div>
+                    {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
+                    {this.state.applications.About && <AboutWindow close={this.toggleApplication}/>}
+                    {this.props.children}
+                    <TaskBar toggleApplication={this.toggleApplication}/>
+                </div>
             </div>
         ) ;
     }
