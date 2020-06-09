@@ -1,6 +1,5 @@
 import React from "react";
 import Window from "../Desktop/WindowComponent";
-import { GiphyFetch } from "@giphy/js-fetch-api";
 import './GifWindow.css'
 
 export default class GifWindow extends React.Component {
@@ -9,14 +8,25 @@ export default class GifWindow extends React.Component {
         loading: true
     }
 
+
+    // constructor(props) {
+    //     super(props);
+    //     // this.getGif = getGif;
+    //     this.getGif()
+    // }
+
     getGif = async () => {
-       const giphy = new GiphyFetch('ne12OfQigz9qivvaPFcvox98fuA5SRyV');
-       const {data: gifs} = await giphy.random()
-        this.setState({gifs, loading: false});
-        console.log(gifs);
+       //let giphy = new GiphyFetch('ne12OfQigz9qivvaPFcvox98fuA5SRyV');
+       // const {data: gifs} = await giphy.random()
+
+        let data = await fetch("http://api.giphy.com/v1/gifs/random?api_key=ne12OfQigz9qivvaPFcvox98fuA5SRyV");
+        data = await data.json()
+        console.log(data)
+        //this.setState({gifs, loading: false});
     }
 
     componentDidMount() {
+        console.log('sfdsdf')
         this.getGif()
     }
 
