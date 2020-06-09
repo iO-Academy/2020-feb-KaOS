@@ -4,6 +4,7 @@ import './Desktop.css';
 import Logo from "./Logo";
 import AboutWindow from "../AboutWindow"
 import GifWindow from "../GifWindow"
+import MusicWindow from "../MusicWindow";
 
 export default class Desktop extends React.Component {
     state = {
@@ -32,6 +33,7 @@ export default class Desktop extends React.Component {
                     </div>
                     {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
                     {this.state.applications.About && <AboutWindow  close={this.toggleApplication}/>}
+                    {this.state.applications.Music && <MusicWindow  close={this.toggleApplication}/>}
                     <TaskBar toggleApplication={this.toggleApplication}/>
                 </div>
             </div>
