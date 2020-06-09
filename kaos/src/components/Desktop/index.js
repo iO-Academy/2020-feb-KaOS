@@ -29,7 +29,7 @@ export default class Desktop extends React.Component {
                     <div className='LogoContainer'>
                         <Logo/>
                     </div>
-                    {this.state.applications.Gif && <GifWindow open={this.state.applications.Gif} close={this.toggleApplication}/>}
+                    {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
                     {this.state.applications.About && <AboutWindow  close={this.toggleApplication}/>}
                     {this.props.children}
                     <TaskBar toggleApplication={this.toggleApplication}/>
