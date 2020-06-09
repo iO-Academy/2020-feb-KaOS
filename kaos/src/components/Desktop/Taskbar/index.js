@@ -10,6 +10,7 @@ export default class TaskBar extends React.Component {
                 <div className='IconList'>
                     <IconComponent name='About' open={this.props.toggleApplication}/>
                     <IconComponent name='Gif' open={this.props.toggleApplication}/>
+                    <IconComponent name='Music' open={this.props.toggleApplication}/>
                 </div>
                 <Clock />
             </div>
