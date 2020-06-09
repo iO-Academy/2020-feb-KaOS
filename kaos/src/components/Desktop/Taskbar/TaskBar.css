@@ -7,3 +7,7 @@
     width: 100vw;
     background-color: #afafaf;
 }
+
+.IconList .Icon{
+    float: left;
+}
