@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './TaskBar.css';
 import Clock from '../../Clock'
-import IconComponent from "./Icon";
+import IconComponent from './Icon';
 
 export default class TaskBar extends React.Component {
     render() {

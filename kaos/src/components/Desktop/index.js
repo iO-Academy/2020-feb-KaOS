@@ -1,11 +1,11 @@
 import React from 'react';
-import TaskBar from "./Taskbar";
+import TaskBar from './Taskbar';
 import './Desktop.css';
-import Logo from "./Logo";
-import AboutWindow from "../AboutWindow"
-import GifWindow from "../GifWindow"
-import MusicWindow from "../MusicWindow";
-import ThemeWindow from "../ThemeWindow";
+import Logo from './Logo';
+import AboutWindow from '../AboutWindow'
+import GifWindow from '../GifWindow'
+import MusicWindow from '../MusicWindow';
+import ThemeWindow from '../ThemeWindow';
 
 import'../../Themes/Orange.css';
 import'../../Themes/Green.css';
@@ -50,7 +50,7 @@ export default class Desktop extends React.Component {
             <div className={this.state.theme}>
                 <div className="AboutWindow">
                     <div className='LogoContainer'>
-                        <Logo/>
+                        <Logo theme={this.state.theme}/>
                     </div>
                     {this.state.applications.Gif && <GifWindow setActive={this.setActive}
                                                                active={this.state.activeApplication}

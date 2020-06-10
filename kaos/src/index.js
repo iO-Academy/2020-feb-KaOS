@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Desktop from "./components/Desktop";
-import SplashScreen from "./components/SplashScreen";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Desktop from './components/Desktop';
+import SplashScreen from './components/SplashScreen';
 
 class App extends React.Component {
     state = {
@@ -22,4 +22,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App/>, document.querySelector("#app"));
+ReactDOM.render(<App/>, document.querySelector('#app'));

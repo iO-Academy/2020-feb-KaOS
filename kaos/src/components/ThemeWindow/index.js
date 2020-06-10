@@ -1,5 +1,5 @@
-import React from "react";
-import Window from "../Desktop/WindowComponent";
+import React from 'react';
+import Window from '../Desktop/WindowComponent';
 
 
 export default class ThemeWindow extends React.Component {

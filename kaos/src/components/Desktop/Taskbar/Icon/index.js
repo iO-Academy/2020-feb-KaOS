@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './Icon.css';
 
 export default class IconComponent extends React.Component {
