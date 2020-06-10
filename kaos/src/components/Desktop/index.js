@@ -17,11 +17,9 @@ export default class Desktop extends React.Component {
     };
 
     setActive = (appName) => {
-        console.log(appName);
         this.setState({
             activeApplication: appName
         });
-
     };
 
     toggleApplication = (appName) => {
