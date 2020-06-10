@@ -12,6 +12,7 @@ export default class TaskBar extends React.Component {
                     <IconComponent setActive={this.props.setActive} name='Gif' open={this.props.toggleApplication}/>
                     <IconComponent setActive={this.props.setActive} name='Music' open={this.props.toggleApplication}/>
                     <IconComponent setActive={this.props.setActive} name='Theme' open={this.props.toggleApplication}/>
+                    <IconComponent setActive={this.props.setActive} name='Task' open={this.props.toggleApplication}/>
                 </div>
                 <Clock />
             </div>
