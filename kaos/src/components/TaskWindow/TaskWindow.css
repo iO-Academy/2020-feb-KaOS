@@ -1,0 +1,14 @@
+.closeButton {
+    background-color: #ff363b;
+    border: none;
+}
+
+.bringToFrontButton {
+    border: none;
+}
+
+.managerContainer {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3,1fr);
+}
