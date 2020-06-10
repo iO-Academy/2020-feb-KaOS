@@ -2,8 +2,8 @@ import React from 'react';
 import TaskBar from './Taskbar';
 import './Desktop.css';
 import Logo from './Logo';
-import AboutWindow from '../AboutWindow'
-import GifWindow from '../GifWindow'
+import AboutWindow from '../AboutWindow';
+import GifWindow from '../GifWindow';
 import MusicWindow from '../MusicWindow';
 import ThemeWindow from '../ThemeWindow';
 
