@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 import './TaskBar.css';
 import Clock from '../../Clock'
-import IconComponent from "./Icon";
-import Window from "../WindowComponent";
+import IconComponent from './Icon';
 
 export default class TaskBar extends React.Component {
     render() {
@@ -12,6 +11,7 @@ export default class TaskBar extends React.Component {
                     <IconComponent setActive={this.props.setActive} name='About' open={this.props.toggleApplication}/>
                     <IconComponent setActive={this.props.setActive} name='Gif' open={this.props.toggleApplication}/>
                     <IconComponent setActive={this.props.setActive} name='Music' open={this.props.toggleApplication}/>
+                    <IconComponent setActive={this.props.setActive} name='Theme' open={this.props.toggleApplication}/>
                 </div>
                 <Clock />
             </div>

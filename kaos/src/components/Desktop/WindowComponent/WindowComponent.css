@@ -1,7 +1,6 @@
 .WindowTop {
     border: 1px solid #000000;
     text-align: center;
-    background-color: #f17711;
     animation: ease-in;
     text-transform: uppercase;
     font-weight: bold;
@@ -18,8 +17,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    color: #FFFFFF;
-    background-color: black;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 

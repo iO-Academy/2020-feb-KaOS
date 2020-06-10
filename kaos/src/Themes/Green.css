@@ -1,0 +1,23 @@
+.Green {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #d0d0d0;
+    z-index: -20;
+}
+
+.Green .TaskBar {
+    color: #008f11;
+    background-color: #ffffff;
+}
+
+.Green .WindowTop {
+    background-color: #008f11;
+    color: #FFFFFF;
+}
+
+.Green .WindowContainer {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
