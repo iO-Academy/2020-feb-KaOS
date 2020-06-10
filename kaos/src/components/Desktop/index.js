@@ -67,7 +67,8 @@ export default class Desktop extends React.Component {
                                                                    setActive={this.setActive}
                                                                    active={this.state.activeApplication}
                                                                    close={this.toggleApplication}/>}
-                    {this.state.applications.Task && <TaskWindow applications={this.state.applications}
+                    {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
+                                                                 applications={this.state.applications}
                                                                  setActive={this.setActive}
                                                                  active={this.state.activeApplication}
                                                                  close={this.toggleApplication}/>}
