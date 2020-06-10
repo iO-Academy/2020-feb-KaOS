@@ -1,14 +1,14 @@
-.TaskBar {
+.Red .TaskBar {
     color: #FFFFFF;
     background-color: #c70000;
 }
 
-.WindowTop {
+.Red .WindowTop {
     background-color: #c70000;
     color: #FFFFFF;
 }
 
-.WindowContainer {
+.Red .WindowContainer {
     color: #000000;
     background-color: #FFFFFF;
 }

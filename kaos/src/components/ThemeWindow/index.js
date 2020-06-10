@@ -5,8 +5,9 @@ import Window from "../Desktop/WindowComponent";
 export default class ThemeWindow extends React.Component {
     render() {
         return (
-            <Window setActive={this.props.setActive} active={this.props.active} height={150} close={this.props.close} name='Theme'>
-                <div className='AboutContent'>
+            <Window setActive={this.props.setActive} active={this.props.active} height={150}
+                    close={this.props.close} name='Theme'>
+                <div>
                     <button type='button' onClick={()=> {
                         this.props.setTheme('Red')
                     }}>Red</button>

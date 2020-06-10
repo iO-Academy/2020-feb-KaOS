@@ -7,11 +7,10 @@ import GifWindow from "../GifWindow"
 import MusicWindow from "../MusicWindow";
 import ThemeWindow from "../ThemeWindow";
 
-// import'../../Themes/Orange.css';
-// import'../../Themes/Green.css';
-// import'../../Themes/Blue.css';
-//     import'../../Themes/Red.css';
-
+import'../../Themes/Orange.css';
+import'../../Themes/Green.css';
+import'../../Themes/Blue.css';
+import'../../Themes/Red.css';
 
 export default class Desktop extends React.Component {
     state = {
@@ -47,8 +46,6 @@ export default class Desktop extends React.Component {
     };
 
     render() {
-        require(`../../Themes/${this.state.theme}.css`);
-        console.log(this.state.theme);
         return (
             <div className={this.state.theme}>
                 <div className="AboutWindow">

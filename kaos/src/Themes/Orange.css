@@ -1,10 +1,15 @@
-.TaskBar {
+.Orange .TaskBar {
     color: #F17711;
     background-color: #000000;
 }
 
-.WindowTop {
+.Orange  .WindowTop {
     background-color: #f17711;
+}
+
+.Orange .WindowContainer {
+    color: #FFFFFF;
+    background-color: #000000;
 }
 
 body {
