@@ -20,7 +20,7 @@ export default class GifWindow extends React.Component {
 
     render() {
         return (
-            <Window close={this.props.close} name='Gif'>
+            <Window setActive={this.props.setActive} active={this.props.active} close={this.props.close} name='Gif'>
                 <div className='GifContent'>
                     {!this.state.loading?<img src={this.state.gifs.data.image_original_url}/>:'Loading...'}
                 </div>

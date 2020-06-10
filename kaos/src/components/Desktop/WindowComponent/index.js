@@ -7,6 +7,8 @@ class Window extends React.Component {
 
     render() {
         return (
+            <div onClick={() => this.props.setActive(this.props.name)}
+            className={this.props.active === this.props.name ? "active" : "inactive"}>
                 <Draggable
                     axis="both"
                     handle=".WindowTop"
@@ -37,6 +39,7 @@ class Window extends React.Component {
                         </div>
                     </Resizable>
                 </Draggable>
+            </div>
         );
     }
 }

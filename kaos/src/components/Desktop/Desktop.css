@@ -13,3 +13,15 @@ body {
     width: 100vw;
     z-index: -1;
 }
+
+.inactive {
+    position: relative;
+    filter: brightness(50%);
+    z-index: 5;
+}
+
+.active {
+    position: relative;
+    filter: brightness(100%);
+    z-index: 9;
+}
