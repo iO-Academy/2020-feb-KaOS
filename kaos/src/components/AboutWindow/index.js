@@ -1,7 +1,7 @@
-import React from "react";
-import Window from "../Desktop/WindowComponent";
-import './AboutWindow.css'
-import Mike from "../../Image/mikeeating.png"
+import React from 'react';
+import Window from '../Desktop/WindowComponent';
+import './AboutWindow.css';
+import Mike from '../../Image/mikeeating.png';
 
 export default class AboutWindow extends React.Component {
     render() {

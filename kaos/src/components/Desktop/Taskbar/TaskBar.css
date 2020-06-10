@@ -5,14 +5,11 @@
     bottom: 0px;
     height: 60px;
     width: 100vw;
-    background-color: #000000;
-    color: #F17711;
     z-index: 100;
 }
 
 .IconList .Icon{
     float: left;
-    background-color: #000000;
     text-transform: uppercase;
     font-weight: bold;
 }
