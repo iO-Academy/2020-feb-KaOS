@@ -8,11 +8,18 @@ import MusicWindow from "../MusicWindow";
 
 export default class Desktop extends React.Component {
     state = {
+        activeApplication: '',
         applications:{
             About: false,
             Gif: false,
             Music: false
         }
+    };
+
+    setActive = (appName) => {
+        this.setState({
+            activeApplication: appName
+        });
     };
 
     toggleApplication = (appName) => {
@@ -21,7 +28,7 @@ export default class Desktop extends React.Component {
                 ...this.state.applications,
                 [appName]: !this.state.applications[appName]
             }
-        })
+        });
     };
 
     render() {
@@ -31,10 +38,16 @@ export default class Desktop extends React.Component {
                     <div className='LogoContainer'>
                         <Logo/>
                     </div>
-                    {this.state.applications.Gif && <GifWindow close={this.toggleApplication}/>}
-                    {this.state.applications.About && <AboutWindow  close={this.toggleApplication}/>}
-                    {this.state.applications.Music && <MusicWindow  close={this.toggleApplication}/>}
-                    <TaskBar toggleApplication={this.toggleApplication}/>
+                    {this.state.applications.Gif && <GifWindow setActive={this.setActive}
+                                                               active={this.state.activeApplication}
+                                                               close={this.toggleApplication}/>}
+                    {this.state.applications.About && <AboutWindow setActive={this.setActive}
+                                                                   active={this.state.activeApplication}
+                                                                   close={this.toggleApplication}/>}
+                    {this.state.applications.Music && <MusicWindow setActive={this.setActive}
+                                                                   active={this.state.activeApplication}
+                                                                   close={this.toggleApplication}/>}
+                    <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                 </div>
             </div>
         ) ;
