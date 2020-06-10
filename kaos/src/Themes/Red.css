@@ -1,0 +1,18 @@
+.TaskBar {
+    color: #FFFFFF;
+    background-color: #c70000;
+}
+
+.WindowTop {
+    background-color: #c70000;
+    color: #FFFFFF;
+}
+
+.WindowContainer {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+body {
+    background-color: #2b2b2b;
+}

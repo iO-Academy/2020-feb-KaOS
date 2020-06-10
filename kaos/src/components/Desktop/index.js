@@ -5,14 +5,23 @@ import Logo from "./Logo";
 import AboutWindow from "../AboutWindow"
 import GifWindow from "../GifWindow"
 import MusicWindow from "../MusicWindow";
+import ThemeWindow from "../ThemeWindow";
+
+// import'../../Themes/Orange.css';
+// import'../../Themes/Green.css';
+// import'../../Themes/Blue.css';
+//     import'../../Themes/Red.css';
+
 
 export default class Desktop extends React.Component {
     state = {
+        theme: 'Orange',
         activeApplication: '',
         applications:{
             About: false,
             Gif: false,
-            Music: false
+            Music: false,
+            Theme: false
         }
     };
 
@@ -31,9 +40,17 @@ export default class Desktop extends React.Component {
         });
     };
 
+    setTheme = (theme) => {
+        this.setState({
+            theme: theme
+        });
+    };
+
     render() {
+        require(`../../Themes/${this.state.theme}.css`);
+        console.log(this.state.theme);
         return (
-            <div>
+            <div className={this.state.theme}>
                 <div className="AboutWindow">
                     <div className='LogoContainer'>
                         <Logo/>
@@ -45,6 +62,10 @@ export default class Desktop extends React.Component {
                                                                    active={this.state.activeApplication}
                                                                    close={this.toggleApplication}/>}
                     {this.state.applications.Music && <MusicWindow setActive={this.setActive}
+                                                                   active={this.state.activeApplication}
+                                                                   close={this.toggleApplication}/>}
+                    {this.state.applications.Theme && <ThemeWindow setTheme={this.setTheme}
+                                                                   setActive={this.setActive}
                                                                    active={this.state.activeApplication}
                                                                    close={this.toggleApplication}/>}
                     <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
