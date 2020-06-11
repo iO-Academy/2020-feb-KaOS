@@ -7,18 +7,24 @@ export default class TaskWindow extends React.Component {
         return (
             <Window setActive={this.props.setActive} active={this.props.active} height={270}
                     close={this.props.close} name='Task'>
-                {Object.keys(this.props.applications).filter(app => this.props.applications[app]).map((app) => (
-                    <div className='managerContainer'>
-                        {app}.exe
-                        <button className='bringToFrontButton' type='button' onClick={() => {
-                            setTimeout(() => this.props.setActive(app), 250)}}>
-                            Bring to Front
-                        </button>
-                        <button className='closeButton' type='button' onClick={() => {this.props.toggleApplication(app)}}>
-                            Close
-                        </button>
-                    </div>
-                ))}
+                {Object.keys(this.props.applications)
+                    .filter(app => this.props.applications[app])
+                    .map((app,i) => (
+                        <div className='managerContainer' key={i}>
+                            {app}.exe
+                            <button className='bringToFrontButton' type='button' onClick={() => {
+                                setTimeout(() => this.props.setActive(app), 250)
+                            }}>
+                                Bring to Front
+                            </button>
+                            <button className='closeButton' type='button' onClick={() => {
+                                this.props.toggleApplication(app)
+                            }}>
+                                Close
+                            </button>
+                        </div>
+                    )
+                )}
             </Window>
         )
     }

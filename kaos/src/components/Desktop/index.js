@@ -50,10 +50,10 @@ export default class Desktop extends React.Component {
 
     onKeyDown = () => {
         const currentActive = Object.keys(this.state.applications).filter(app => this.state.applications[app]);
-        for(let i = 0; i < currentActive.length; i++){
-            if(i === ((currentActive.length) - 1)) {
+        for (let i = 0; i < currentActive.length; i++) {
+            if (i === (currentActive.length) - 1) {
                 this.setActive(currentActive[0]);
-            } else if(currentActive[i] === this.state.activeApplication) {
+            } else if (currentActive[i] === this.state.activeApplication) {
                 this.setActive(currentActive[i + 1]);
                 break;
             }
@@ -65,7 +65,7 @@ export default class Desktop extends React.Component {
             <Hotkeys
                 keyName='shift+q'
                 onKeyDown={this.onKeyDown.bind(this)}
-                >
+            >
             <div className={this.state.theme}>
                 <div className="AboutWindow">
                     <div className='LogoContainer'>
