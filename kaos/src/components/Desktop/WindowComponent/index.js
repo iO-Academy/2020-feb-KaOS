@@ -12,7 +12,7 @@ class Window extends React.Component {
                 <Draggable
                     axis='both'
                     handle='.WindowTop'
-                    defaultPosition={{x: 50, y: 50}}
+                    defaultPosition={{x: Math.floor(Math.random()*1000)+51, y: Math.floor(Math.random()*50)+51}}
                     position={null}
                     grid={[1, 1]}
                     scale={1}
