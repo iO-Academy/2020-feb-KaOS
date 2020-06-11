@@ -6,21 +6,23 @@ import AboutWindow from '../AboutWindow';
 import GifWindow from '../GifWindow';
 import MusicWindow from '../MusicWindow';
 import ThemeWindow from '../ThemeWindow';
+import TaskWindow from '../TaskWindow';
 
-import'../../Themes/Orange.css';
-import'../../Themes/Green.css';
-import'../../Themes/Blue.css';
-import'../../Themes/Red.css';
+import '../../Themes/Orange.css';
+import '../../Themes/Green.css';
+import '../../Themes/Blue.css';
+import '../../Themes/Red.css';
 
 export default class Desktop extends React.Component {
     state = {
         theme: 'Orange',
         activeApplication: '',
-        applications:{
+        applications: {
             About: false,
             Gif: false,
             Music: false,
-            Theme: false
+            Theme: false,
+            Task: false
         }
     };
 
@@ -32,7 +34,7 @@ export default class Desktop extends React.Component {
 
     toggleApplication = (appName) => {
         this.setState({
-            applications:{
+            applications: {
                 ...this.state.applications,
                 [appName]: !this.state.applications[appName]
             }
@@ -65,9 +67,14 @@ export default class Desktop extends React.Component {
                                                                    setActive={this.setActive}
                                                                    active={this.state.activeApplication}
                                                                    close={this.toggleApplication}/>}
+                    {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
+                                                                 applications={this.state.applications}
+                                                                 setActive={this.setActive}
+                                                                 active={this.state.activeApplication}
+                                                                 close={this.toggleApplication}/>}
                     <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                 </div>
             </div>
-        ) ;
+        );
     }
 }
