@@ -66,32 +66,32 @@ export default class Desktop extends React.Component {
                 keyName='shift+q'
                 onKeyDown={this.onKeyDown.bind(this)}
             >
-            <div className={this.state.theme}>
-                <div className="AboutWindow">
-                    <div className='LogoContainer'>
-                        <Logo theme={this.state.theme}/>
+                <div className={this.state.theme}>
+                    <div className="AboutWindow">
+                        <div className='LogoContainer'>
+                            <Logo theme={this.state.theme}/>
+                        </div>
+                        {this.state.applications.Gif && <GifWindow setActive={this.setActive}
+                                                                   active={this.state.activeApplication}
+                                                                   close={this.toggleApplication}/>}
+                        {this.state.applications.About && <AboutWindow setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Music && <MusicWindow setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Theme && <ThemeWindow setTheme={this.setTheme}
+                                                                       setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
+                                                                     applications={this.state.applications}
+                                                                     setActive={this.setActive}
+                                                                     active={this.state.activeApplication}
+                                                                     close={this.toggleApplication}/>}
+                        <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                     </div>
-                    {this.state.applications.Gif && <GifWindow setActive={this.setActive}
-                                                               active={this.state.activeApplication}
-                                                               close={this.toggleApplication}/>}
-                    {this.state.applications.About && <AboutWindow setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Music && <MusicWindow setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Theme && <ThemeWindow setTheme={this.setTheme}
-                                                                   setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
-                                                                 applications={this.state.applications}
-                                                                 setActive={this.setActive}
-                                                                 active={this.state.activeApplication}
-                                                                 close={this.toggleApplication}/>}
-                    <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                 </div>
-            </div>
             </Hotkeys>
         );
     }
