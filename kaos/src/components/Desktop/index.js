@@ -7,6 +7,7 @@ import GifWindow from '../GifWindow';
 import MusicWindow from '../MusicWindow';
 import ThemeWindow from '../ThemeWindow';
 import TaskWindow from '../TaskWindow';
+import Hotkeys from 'react-hot-keys';
 
 import '../../Themes/Orange.css';
 import '../../Themes/Green.css';
@@ -47,34 +48,51 @@ export default class Desktop extends React.Component {
         });
     };
 
+    onKeyDown = () => {
+        const currentActive = Object.keys(this.state.applications).filter(app => this.state.applications[app]);
+        for (let i = 0; i < currentActive.length; i++) {
+            if (i === (currentActive.length) - 1) {
+                this.setActive(currentActive[0]);
+            } else if (currentActive[i] === this.state.activeApplication) {
+                this.setActive(currentActive[i + 1]);
+                break;
+            }
+        }
+    };
+
     render() {
         return (
-            <div className={this.state.theme}>
-                <div className="AboutWindow">
-                    <div className='LogoContainer'>
-                        <Logo theme={this.state.theme}/>
+            <Hotkeys
+                keyName='shift+q'
+                onKeyDown={this.onKeyDown.bind(this)}
+            >
+                <div className={this.state.theme}>
+                    <div className="AboutWindow">
+                        <div className='LogoContainer'>
+                            <Logo theme={this.state.theme}/>
+                        </div>
+                        {this.state.applications.Gif && <GifWindow setActive={this.setActive}
+                                                                   active={this.state.activeApplication}
+                                                                   close={this.toggleApplication}/>}
+                        {this.state.applications.About && <AboutWindow setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Music && <MusicWindow setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Theme && <ThemeWindow setTheme={this.setTheme}
+                                                                       setActive={this.setActive}
+                                                                       active={this.state.activeApplication}
+                                                                       close={this.toggleApplication}/>}
+                        {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
+                                                                     applications={this.state.applications}
+                                                                     setActive={this.setActive}
+                                                                     active={this.state.activeApplication}
+                                                                     close={this.toggleApplication}/>}
+                        <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                     </div>
-                    {this.state.applications.Gif && <GifWindow setActive={this.setActive}
-                                                               active={this.state.activeApplication}
-                                                               close={this.toggleApplication}/>}
-                    {this.state.applications.About && <AboutWindow setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Music && <MusicWindow setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Theme && <ThemeWindow setTheme={this.setTheme}
-                                                                   setActive={this.setActive}
-                                                                   active={this.state.activeApplication}
-                                                                   close={this.toggleApplication}/>}
-                    {this.state.applications.Task && <TaskWindow toggleApplication={this.toggleApplication}
-                                                                 applications={this.state.applications}
-                                                                 setActive={this.setActive}
-                                                                 active={this.state.activeApplication}
-                                                                 close={this.toggleApplication}/>}
-                    <TaskBar setActive={this.setActive} toggleApplication={this.toggleApplication}/>
                 </div>
-            </div>
+            </Hotkeys>
         );
     }
 }
