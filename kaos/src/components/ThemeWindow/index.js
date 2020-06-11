@@ -12,21 +12,22 @@ export default class ThemeWindow extends React.Component {
                     <button className='themeButton' type='button' onClick={()=> {
                         this.props.setTheme('Red')
                     }}>
-                        <i className='fas fa-circle redButton'></i>
+                        <i className='fas fa-circle redButton'/>
                     </button>
                     <button className='themeButton' type='button' onClick={()=> {
                         this.props.setTheme('Blue')
                     }}>
-                        <i className='fas fa-circle blueButton'></i>
+                        <i className='fas fa-circle blueButton'/>
                     </button>
                     <button className='themeButton' type='button' onClick={()=> {
                         this.props.setTheme('Orange')
-                    }}><i className='fas fa-circle orangeButton'></i>
+                    }}>
+                        <i className='fas fa-circle orangeButton'/>
                     </button>
                     <button className='themeButton' type='button' onClick={()=> {
                         this.props.setTheme('Green')
                     }}>
-                        <i className='fas fa-circle greenButton'></i>
+                        <i className='fas fa-circle greenButton'/>
                     </button>
                 </div>
             </Window>
