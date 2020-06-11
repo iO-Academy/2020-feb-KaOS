@@ -1,0 +1,32 @@
+.themeButton {
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.redButton {
+    color: #c70000;
+}
+
+.blueButton {
+    color: #252ba8;
+}
+
+.orangeButton {
+    color: #f17711;
+}
+
+.greenButton {
+    color: #008f11;
+}
+
+.themeContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

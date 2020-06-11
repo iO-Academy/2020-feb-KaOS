@@ -1,6 +1,7 @@
 .closeButton {
     background-color: #ff363b;
     border: none;
+    margin-left: 5px;
 }
 
 .bringToFrontButton {
