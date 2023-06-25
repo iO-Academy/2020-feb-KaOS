@@ -14,7 +14,7 @@
     "react-hot-keys": "^2.5.2",
     "react-hotkeys": "^2.0.0",
     "react-resizable": "^1.10.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
